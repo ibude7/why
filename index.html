@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramount+ Jeopardy Game - 24 Players</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="startScreen" class="start-screen">
+            <h1 class="main-title">Paramount+ Jeopardy</h1>
+            <p class="subtitle">24 Player Championship</p>
+            
+            <div class="players-grid">
+                <h3>Players:</h3>
+                <div id="playersList" class="players-list"></div>
+                <div id="playerInputContainer" class="players-input-container">
+                    <p class="input-instruction">Enter player names below:</p>
+                    <div id="playerInputs" class="player-inputs-grid"></div>
+                    <div class="player-input-controls">
+                        <button id="addPlayerFieldBtn" class="btn btn--outline btn--sm">Add Player</button>
+                        <button id="removePlayerFieldBtn" class="btn btn--outline btn--sm">Remove Player</button>
+                        <button id="useDefaultNamesBtn" class="btn btn--outline btn--sm">Use Default Names</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="start-controls">
+                <button id="startGameBtn" class="btn btn--primary btn--lg">Start Game</button>
+                <button id="audioToggle" class="btn btn--secondary">🔊 Audio Enabled</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="game-screen hidden">
+            <!-- Header -->
+            <header class="game-header">
+                <h1 class="jeopardy-logo">JEOPARDY!</h1>
+                <div class="current-player-info">
+                    <span class="current-player-label">Current Player:</span>
+                    <span id="currentPlayerName" class="current-player-name"></span>
+                    <div class="player-stats">
+                        <span class="stat">Score: <span id="currentScore" class="score-value">0 min</span></span>
+                        <span class="stat">Break Time: <span id="currentBreakTime" class="break-value">0 min</span></span>
+                    </div>
+                </div>
+                <div class="game-controls">
+                    <button id="resetBtn" class="btn btn--outline">Reset Game</button>
+                    <button id="showLeaderboardBtn" class="btn btn--secondary">Leaderboard</button>
+                </div>
+            </header>
+
+            <!-- Game Board -->
+            <div class="game-board">
+                <div class="categories-row">
+                    <div class="category-cell">STAR TREK<br>UNIVERSE</div>
+                    <div class="category-cell">YELLOWSTONE<br>UNIVERSE</div>
+                    <div class="category-cell">ANIMATION<br>NATION</div>
+                    <div class="category-cell">CRIME<br>TIME</div>
+                    <div class="category-cell">SHOWTIME<br>ORIGINALS</div>
+                    <div class="category-cell">CLASSIC<br>MOVIES</div>
+                </div>
+                <div class="values-grid" id="valuesGrid"></div>
+            </div>
+        </div>
+
+        <!-- Question Modal -->
+        <div id="questionModal" class="modal">
+            <div class="modal-content">
+                <div class="question-header">
+                    <h3 id="questionCategory" class="question-category"></h3>
+                    <div class="current-player-display">
+                        <span id="modalPlayerName" class="modal-player-name"></span>
+                    </div>
+                </div>
+                <div id="questionText" class="question-text"></div>
+                <div id="countdownTimer" class="countdown-timer">30</div>
+                <div class="question-controls">
+                    <button id="showAnswerBtn" class="btn btn--primary">Show Answer</button>
+                </div>
+                <div id="answerSection" class="answer-section hidden">
+                    <div id="answerText" class="answer-text"></div>
+                    <div class="answer-controls">
+                        <button id="correctBtn" class="btn btn--success">✓ Correct</button>
+                        <button id="incorrectBtn" class="btn btn--error">✗ Incorrect</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leaderboard Modal -->
+        <div id="leaderboardModal" class="modal">
+            <div class="modal-content leaderboard-modal">
+                <div class="modal-header">
+                    <h2>Current Leaderboard</h2>
+                    <button id="closeLeaderboardBtn" class="btn btn--outline btn--sm">Close</button>
+                </div>
+                <div id="leaderboardContent" class="leaderboard-content"></div>
+            </div>
+        </div>
+
+        <!-- Final Results Modal -->
+        <div id="finalResultsModal" class="modal">
+            <div class="modal-content final-results-modal">
+                <h2 class="final-title">🏆 Final Championship Results 🏆</h2>
+                <div id="finalLeaderboard" class="final-leaderboard"></div>
+                <div class="final-controls">
+                    <button id="playAgainBtn" class="btn btn--primary">Play Again</button>
+                    <button id="exportResultsBtn" class="btn btn--secondary">Export Results</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Break Time Notification -->
+        <div id="breakNotification" class="break-notification hidden">
+            <div class="break-content">
+                <span id="breakMessage" class="break-message"></span>
+                <button id="dismissBreakBtn" class="btn btn--outline btn--sm">Continue</button>
+            </div>
+        </div>
+
+        <!-- Audio Elements -->
+        <audio id="clickSound" preload="auto">
+            <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+Dt" type="audio/wav">
+        </audio>
+        
+        <audio id="correctSound" preload="auto">
+            <source src="data:audio/wav;base64,UklGRuQDAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YcADAAA/hYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+Dt" type="audio/wav">
+        </audio>
+
+        <audio id="incorrectSound" preload="auto">
+            <source src="data:audio/wav;base64,UklGRuQDAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YcADAAA/hYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+Dt" type="audio/wav">
+        </audio>
+
+        <audio id="applauseSound" preload="auto">
+            <source src="data:audio/wav;base64,UklGRuQDAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YcADAAA/hYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+Dt" type="audio/wav">
+        </audio>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

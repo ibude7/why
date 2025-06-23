@@ -1,0 +1,141 @@
+{
+  "categories": {
+    "STAR TREK UNIVERSE": {
+      "100": {
+        "question": "This USS Discovery captain, played by Sonequa Martin-Green, leads the crew in Season 5's final adventure across the galaxy.",
+        "answer": "Who is Captain Burnham?"
+      },
+      "200": {
+        "question": "This animated Star Trek series follows the support crew on one of Starfleet's least important ships, the USS Cerritos.",
+        "answer": "What is Star Trek: Lower Decks?"
+      },
+      "300": {
+        "question": "Set before Captain Kirk's time, this series follows Captain Pike, Spock, and Number One exploring new worlds.",
+        "answer": "What is Star Trek: Strange New Worlds?"
+      },
+      "400": {
+        "question": "This 2024 film starring Michelle Yeoh focuses on the mysterious Section 31 organization within Starfleet.",
+        "answer": "What is Star Trek: Section 31?"
+      },
+      "500": {
+        "question": "Taking place 20 years after The Next Generation, this series follows the retired Jean-Luc Picard in a very different place in his life.",
+        "answer": "What is Star Trek: Picard?"
+      }
+    },
+    "YELLOWSTONE UNIVERSE": {
+      "100": {
+        "question": "This Taylor Sheridan series about the Dutton family's ranch empire has spawned multiple spinoffs and prequels.",
+        "answer": "What is Yellowstone?"
+      },
+      "200": {
+        "question": "This prequel follows the Dutton family as they embark on a journey west through the Great Plains in the 1880s.",
+        "answer": "What is 1883?"
+      },
+      "300": {
+        "question": "Billy Bob Thornton stars in this oil industry drama about securing land and mineral rights in West Texas boomtowns.",
+        "answer": "What is Landman?"
+      },
+      "400": {
+        "question": "This series follows the McLusky family, power brokers in a Michigan town where incarceration is the only thriving industry.",
+        "answer": "What is Mayor of Kingstown?"
+      },
+      "500": {
+        "question": "This 1920s-set prequel shows an earlier generation of Duttons during the Prohibition era and Great Depression.",
+        "answer": "What is 1923?"
+      }
+    },
+    "ANIMATION NATION": {
+      "100": {
+        "question": "This absorbent, yellow, and porous sea sponge lives in a pineapple under the sea in Bikini Bottom.",
+        "answer": "Who is SpongeBob SquarePants?"
+      },
+      "200": {
+        "question": "Starting in 2025, this long-running animated series about four Colorado elementary school kids became exclusive to Paramount+.",
+        "answer": "What is South Park?"
+      },
+      "300": {
+        "question": "This pink starfish is SpongeBob's best friend and neighbor, known for his simple-minded but well-meaning personality.",
+        "answer": "Who is Patrick Star?"
+      },
+      "400": {
+        "question": "The special 'Snow Yellow' featured this SpongeBob character deemed the 'squarest of them all' by evil Queen Karen.",
+        "answer": "Who is SpongeBob SquarePants?"
+      },
+      "500": {
+        "question": "This Patrick Star spinoff series features him living with his family including his parents Cecil and Bunny Star.",
+        "answer": "What is The Patrick Star Show?"
+      }
+    },
+    "CRIME TIME": {
+      "100": {
+        "question": "This long-running CBS procedural about Navy criminal investigators is currently in its 22nd season on Paramount+.",
+        "answer": "What is NCIS?"
+      },
+      "200": {
+        "question": "The BAU team returned in Season 18 of this FBI profiling series, also known as 'Evolution.'",
+        "answer": "What is Criminal Minds?"
+      },
+      "300": {
+        "question": "This forensics expert and serial killer, originally played by Michael C. Hall, got a prequel series called 'Original Sin' in 2024.",
+        "answer": "Who is Dexter Morgan?"
+      },
+      "400": {
+        "question": "Set in 1991 Miami, 'Original Sin' shows young Dexter learning to channel his darkness with guidance from this father figure.",
+        "answer": "Who is Harry Morgan?"
+      },
+      "500": {
+        "question": "Patrick Gibson plays the young version of this character in 'Dexter: Original Sin,' while Michael C. Hall voices his inner monologue.",
+        "answer": "Who is Dexter Morgan?"
+      }
+    },
+    "SHOWTIME ORIGINALS": {
+      "100": {
+        "question": "This survival thriller follows a girls' high school soccer team stranded in the wilderness after a plane crash.",
+        "answer": "What is Yellowjackets?"
+      },
+      "200": {
+        "question": "This Chicago-based drama series entered its seventh season in 2025, focusing on celebrations and tribulations of South Side residents.",
+        "answer": "What is The Chi?"
+      },
+      "300": {
+        "question": "Bryan Cranston stars as a judge who must protect his son at any cost in this crime drama series.",
+        "answer": "What is Your Honor?"
+      },
+      "400": {
+        "question": "This competition series hosted by RuPaul featured its 10th All Stars season premiering in May 2025.",
+        "answer": "What is RuPaul's Drag Race All Stars?"
+      },
+      "500": {
+        "question": "Dr. Orna Guralnik returned for Season 4 of this intimate documentary series following real couples in therapy.",
+        "answer": "What is Couples Therapy?"
+      }
+    },
+    "CLASSIC MOVIES": {
+      "100": {
+        "question": "This Francis Ford Coppola trilogy about the Corleone crime family is considered among the greatest films ever made.",
+        "answer": "What is The Godfather?"
+      },
+      "200": {
+        "question": "Tom Cruise reprised his role as Pete 'Maverick' Mitchell in this 2022 sequel about training new TOPGUN graduates.",
+        "answer": "What is Top Gun: Maverick?"
+      },
+      "300": {
+        "question": "Marlon Brando won the Best Actor Oscar for playing this patriarch of the Corleone family in the 1972 film.",
+        "answer": "Who is Don Vito Corleone?"
+      },
+      "400": {
+        "question": "This 1990s teen comedy starring Alicia Silverstone is an updated version of Jane Austen's 'Emma' set in Beverly Hills.",
+        "answer": "What is Clueless?"
+      },
+      "500": {
+        "question": "Instead of the theatrical version, Paramount+ features this 2020 re-edited version of The Godfather Part III.",
+        "answer": "What is The Godfather Coda: The Death of Michael Corleone?"
+      }
+    }
+  },
+  "final_jeopardy": {
+    "category": "PARAMOUNT+ ORIGINALS",
+    "question": "This 2024 film marked Michelle Yeoh's return to the Star Trek universe, focusing on a mysterious organization within Starfleet that operates in the shadows.",
+    "answer": "What is Star Trek: Section 31?"
+  }
+}
